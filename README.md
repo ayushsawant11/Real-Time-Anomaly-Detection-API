@@ -27,3 +27,10 @@ An end-to-end MLOps pipeline that processes streaming transaction data to detect
 ```bash
 git clone [https://github.com/yourusername/anomaly-detection-api.git](https://github.com/yourusername/anomaly-detection-api.git)
 cd anomaly-detection-api
+```
+**2. Create amd activate a virtual environment:**
+```bash
+python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate # Mac/Linux
+```
