@@ -6,13 +6,13 @@
 
 An end-to-end MLOps pipeline that processes streaming transaction data to detect anomalies in milliseconds. This system uses an unsupervised machine learning model (Isolation Forest) wrapped in a high-speed FastAPI backend to bridge the gap between core data science and production-ready software engineering.
 
-## 🚀 The Architecture
+##  The Architecture
 
 1. **Model Training Pipeline:** A dedicated script (`train_model.py`) generates synthetic transaction data, trains a Scikit-Learn Isolation Forest model to detect multivariate outliers, and serializes the model using `joblib`.
 2. **Inference Layer:** A decoupled FastAPI backend (`main.py`) loads the pre-trained `.pkl` model into memory during server startup to eliminate cold-start latency.
 3. **Real-Time Evaluation:** The API receives continuous JSON payloads simulating live credit card transactions, extracts the relevant features, and evaluates them for fraud with sub-200ms latency.
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 | Component | Technology | Purpose |
 | :--- | :--- | :--- |
@@ -21,7 +21,7 @@ An end-to-end MLOps pipeline that processes streaming transaction data to detect
 | **Data Processing** | Pandas & NumPy | Feature engineering and data structuring |
 | **Model Serialization**| Joblib | Saving and loading the trained ML model |
 
-## 🛠️ Local Installation & Setup
+##  Local Installation & Setup
 
 **1. Clone the repository:**
 ```bash
@@ -33,4 +33,8 @@ cd anomaly-detection-api
 python -m venv venv
 venv\Scripts\activate  # Windows
 # source venv/bin/activate # Mac/Linux
+```
+**3. install dependencies:**
+```bash
+pip install fastapi uvicorn scikit-learn pandas numpy joblib pydantic
 ```
