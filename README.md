@@ -38,3 +38,8 @@ venv\Scripts\activate  # Windows
 ```bash
 pip install fastapi uvicorn scikit-learn pandas numpy joblib pydantic
 ```
+**4. Train the Machine Learning Model:
+Before starting the API, you must train the model and generate the serialization file.
+```bash
+python train_model.py
+```
