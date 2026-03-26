@@ -43,7 +43,7 @@ Before starting the API, you must train the model and generate the serialization
 ```bash
 python train_model.py
 ```
-**5. Start the API server:
+**5. Start the API server:**
 ```bash
 uvicorn main:app --reload
 ```
